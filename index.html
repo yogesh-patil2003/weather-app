@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Weather App</title>
+  <link rel="stylesheet" href="sty.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-wrap">
+    <header>
+      <h1 class="app-title">Weather App</h1>
+      <div class="search-container">
+        <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city..." />
+        <button class="location-btn" title="Get Current Location">
+          <i class="fas fa-location-crosshairs"></i>
+        </button>
+        <button class="refresh-btn" title="Refresh Weather">
+          <i class="fas fa-sync-alt"></i>
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="loading" style="display: none;">
+        <i class="fas fa-spinner fa-spin"></i>
+        <p>Loading weather data...</p>
+      </div>
+      <div class="error" style="display: none;">
+        <i class="fas fa-exclamation-triangle"></i>
+        <p class="error-message"></p>
+      </div>
+      <div class="weather-content" style="display: none;">
+        <section class="location">
+          <div class="city"></div>
+          <div class="date"></div>
+        </section>
+        <div class="current">
+          <div class="weather-icon">
+            <i class="fas fa-sun"></i>
+          </div>
+          <div class="temp"><span>°C</span></div>
+          <div class="weather"></div>
+          <div class="feels-like">Feels like: <span></span>°C</div>
+        </div>
+        <div class="details">
+          <div class="detail-item">
+            <i class="fas fa-temperature-high"></i>
+            <div>
+              <div class="detail-label">High/Low</div>
+              <div class="hi-low"></div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-tint"></i>
+            <div>
+              <div class="detail-label">Humidity</div>
+              <div class="humidity"></div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-wind"></i>
+            <div>
+              <div class="detail-label">Wind Speed</div>
+              <div class="wind"></div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-gauge"></i>
+            <div>
+              <div class="detail-label">Pressure</div>
+              <div class="pressure"></div>
+            </div>
+          </div>
+        </div>
+        <div class="last-updated">
+          Last updated: <span class="update-time"></span>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

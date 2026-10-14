@@ -2,58 +2,66 @@
 
 A modern, responsive weather application that delivers real-time weather updates with a sleek, interactive gradient interface.
 
+## Live Demo 🚀
+
+Visit the deployed app here:
+
+[Open Live Weather App](https://yogesh-patil2003.github.io/weather-app/)
+
 ![Weather App Preview](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/cloud-sun.svg)
 
 ## Features ✨
 
 ### 🔄 Real-Time Updates
-- **Auto-Refresh:** Weather data automatically updates every 5 minutes.
-- **Manual Refresh:** One-click update button to get the latest data instantly.
-- **Live Timestamp:** Shows exactly when the weather was last fetched.
+- Auto-refresh weather data every 5 minutes
+- Manual refresh button for instant updates
+- Live timestamp showing the last data fetch time
 
 ### 📍 Smart Location
-- **Geolocation:** Automatically detects your current city using the browser's API.
-- **Global Search:** Search for any city worldwide with instant results.
-- **Session Memory:** Remembers your last searched city for your next visit.
+- Automatic geolocation using the browser's location API
+- Global city search with instant results
+- Saved last searched city using local storage
 
 ### 📊 Comprehensive Insights
-- **Temperature:** Current temp with "Feels like" calibration.
-- **Conditions:** High/Low range, humidity, wind speed, and atmospheric pressure.
-- **Dynamic Icons:** Visual weather indicators powered by OpenWeatherMap.
+- Current temperature with a "Feels Like" reading
+- High/low temperature, humidity, wind speed, and pressure
+- Dynamic weather icons powered by OpenWeatherMap
 
 ## Quick Start 🚀
 
-### Option 1: Using the Terminal (Recommended)
-1. Open your terminal (PowerShell or Command Prompt).
+### Option 1: Run locally with a simple HTTP server
+1. Open your terminal.
 2. Navigate to the project folder:
-   ```powershell
-   cd 'C:\Users\offic\OneDrive\Desktop\weather 2'
+   ```bash
+   cd weather-app
    ```
-3. Start the server:
-   ```powershell
+3. Start a local server:
+   ```bash
    python -m http.server 8000
    ```
-4. Open [http://localhost:8000](http://localhost:8000) in your browser.
+4. Open http://localhost:8000 in your browser.
 
-### Option 2: Live Server (VS Code)
-1. Open the folder in VS Code.
-2. Install the **Live Server** extension.
-3. Click **"Go Live"** in the bottom status bar.
+### Option 2: VS Code Live Server
+1. Open the project folder in VS Code.
+2. Install the Live Server extension.
+3. Click "Go Live" in the status bar.
 
 ## Project Structure 📁
-The project has been optimized to include only essential files:
+
 ```text
 weather-app/
-├── index.html   # HTML Structure & Semantic Tags
-├── script.js    # Logic, API Integration & LocalStorage
-├── sty.css      # Modern Gradient UI & Responsive Layout
-└── README.md    # Documentation & Technical Guide
+├── index.html    # App structure and markup
+├── script.js     # Weather logic, API integration, and local storage
+├── sty.css       # Styling, gradients, and responsive design
+├── README.md     # Project documentation
+└── assets/       # Optional static assets (if used)
 ```
 
 ## Technical Configuration 🔧
 
-### API Settings
-The app is currently configured with a default API key. For personal use, you can update it in `script.js`:
+### API Setup
+The app uses OpenWeatherMap API data. You can update the API configuration in `script.js`:
+
 ```javascript
 const api = {
   key: "fcc8de7015bbb202209bbf0261babf4c",
@@ -62,16 +70,15 @@ const api = {
 ```
 
 ### Customization
-- **Change Units:** In `script.js`, change `&units=metric` to `&units=imperial` for Fahrenheit.
-- **Change UI Colors:** Edit the `--gradient` variables in `sty.css`.
+- Change units from metric to imperial by updating `&units=metric` in the request URL.
+- Modify the theme colors from the CSS variables in `sty.css`.
 
 ## Troubleshooting 🔍
-- **Location Denied:** If geolocation fails, ensure you have allowed location permissions in your browser.
-- **City Not Found:** Double-check the spelling of the city name.
-- **Network Error:** Ensure you have an active internet connection to reach the weather API.
+- Location denied: Allow location access in your browser.
+- City not found: Verify the city name spelling.
+- Network issues: Ensure internet connectivity is available.
 
 ---
-**Maintained by:** Antigravity AI
+
 **Data Source:** [OpenWeatherMap](https://openweathermap.org/)
 **Icons:** [Font Awesome](https://fontawesome.com/)
-
